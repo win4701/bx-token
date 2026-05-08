@@ -1,21 +1,47 @@
-const hre = require("hardhat");
+async function main(){
 
-async function main() {
+  const [deployer] =
 
-  const [deployer] = await hre.ethers.getSigners();
+    await ethers.getSigners();
 
-  console.log("Deploying with:", deployer.address);
+  console.log(
 
-  const Token = await hre.ethers.getContractFactory("BxToken");
+    "Deploying with:",
 
-  const token = await Token.deploy(deployer.address);
+    deployer.address
+
+  );
+
+  const Token =
+
+    await ethers.getContractFactory(
+      "BXToken"
+    );
+
+  const token =
+
+    await Token.deploy(
+
+      deployer.address
+
+    );
 
   await token.waitForDeployment();
 
-  console.log("Token deployed to:", await token.getAddress());
+  console.log(
+
+    "BX Token deployed:",
+
+    await token.getAddress()
+
+  );
+
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
+main().catch(err => {
+
+  console.error(err);
+
+  process.exit(1);
+
 });
