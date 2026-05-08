@@ -1,0 +1,33 @@
+{
+  "name": "bx-token",
+  "version": "1.0.0",
+  "description": "Bx BEP20 token built with Solidity and Hardhat",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:testnet": "npx hardhat run scripts/deploy.js --network bscTestnet",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network bscMainnet",
+    "node": "npx hardhat node",
+    "clean": "npx hardhat clean"
+  },
+  "keywords": [
+    "solidity",
+    "bep20",
+    "bnb",
+    "smart-contract",
+    "hardhat",
+    "web3",
+    "crypto"
+  ],
+  "author": "YOUR_NAME",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}
