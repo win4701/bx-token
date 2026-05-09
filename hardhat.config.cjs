@@ -8,10 +8,10 @@ module.exports = {
 
   networks:{
 
-    bsc:{
+    bscMainnet:{
 
       url:
-        process.env.BSC_RPC,
+        process.env.BSC_MAINNET_RPC,
 
       accounts:[
         process.env.PRIVATE_KEY
